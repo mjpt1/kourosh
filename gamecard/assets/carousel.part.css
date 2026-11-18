@@ -1,0 +1,11 @@
+
+/* ===== اسلایدر خودکار با دکمه‌های مثلثی ===== */
+.carousel{position:relative}
+.carousel .rail{scrollbar-width:none;scroll-behavior:smooth;padding-inline:4px}
+.carousel .rail::-webkit-scrollbar{display:none}
+.car-btn{position:absolute;top:calc(50% - 30px);z-index:5;width:46px;height:54px;border:0;cursor:pointer;background:linear-gradient(135deg,var(--v),var(--m));filter:drop-shadow(0 0 10px rgba(255,43,214,.6));transition:transform .2s,filter .2s}
+.car-btn:hover{transform:scale(1.12);filter:drop-shadow(0 0 18px var(--c))}
+.car-btn:active{transform:scale(.92)}
+.car-next{left:-8px;clip-path:polygon(100% 0,100% 100%,0 50%)}
+.car-prev{right:-8px;clip-path:polygon(0 0,0 100%,100% 50%)}
+@media (max-width:640px){.car-btn{width:34px;height:42px;top:calc(50% - 24px)}.car-next{left:-4px}.car-prev{right:-4px}}
